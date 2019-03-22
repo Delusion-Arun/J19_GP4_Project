@@ -229,20 +229,6 @@
      </column>
     </widget>
    </item>
-   <item row="1" column="1">
-    <widget class="QPushButton" name="pushButton_loan_2">
-     <property name="text">
-      <string>Displaying user’s loan record </string>
-     </property>
-    </widget>
-   </item>
-   <item row="2" column="1">
-    <widget class="QPushButton" name="pushButton_submenu_2">
-     <property name="text">
-      <string>Providing a sub-menu for equipment loan</string>
-     </property>
-    </widget>
-   </item>
    <item row="0" column="1">
     <widget class="QPushButton" name="pushButton_item_2">
      <property name="text">
@@ -254,6 +240,20 @@
     <widget class="QPushButton" name="pushButton_exit_2">
      <property name="text">
       <string>Exit</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QPushButton" name="pushButton_loan_2">
+     <property name="text">
+      <string>Displaying user’s loan record </string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QPushButton" name="pushButton_submenu_2">
+     <property name="text">
+      <string>Providing a sub-menu for equipment loan</string>
      </property>
     </widget>
    </item>
