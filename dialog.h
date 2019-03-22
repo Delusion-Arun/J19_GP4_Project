@@ -16,6 +16,9 @@ public:
     ~Dialog();
 
 
+private slots:
+    void on_pushButton_item_2_clicked();
+
 private:
     Ui::Dialog *ui;
 };

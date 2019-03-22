@@ -1,5 +1,7 @@
-#include "equipment.h"
+#include "Equipment.h"
+using namespace std;
 
+// Equipment's constructor
 Equipment::Equipment()
 {
 
@@ -370,3 +372,4 @@ Lantern& Lantern::operator=(const Lantern & lan)
 
     return *this;
 }
+// end of Lantern

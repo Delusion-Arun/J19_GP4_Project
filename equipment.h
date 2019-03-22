@@ -1,8 +1,8 @@
 #ifndef EQUIPMENT_H
 #define EQUIPMENT_H
 
-#include<string>
-using namespace std;
+#include <string>
+using namespace std; // delete this
 
 class Equipment
 {
@@ -121,5 +121,6 @@ public:
     ~Lantern();
 
 };
+
 
 #endif // EQUIPMENT_H
