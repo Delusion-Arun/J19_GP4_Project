@@ -23,8 +23,6 @@ Dialog::~Dialog()
 void Dialog::on_pushButton_item_2_clicked()
 {
 
-
-    Equipment *equip;
     Tent *tents;
     Stove *stove;
     Lantern *lanterns;
@@ -33,7 +31,7 @@ void Dialog::on_pushButton_item_2_clicked()
     for (int row = 0 ; row < 24; row++ )
     {
 
-        if (equip[row].getCondition() == "good" && equip[row].getStatus() == "in"){
+        if (tents[row].getCondition() == "good" && tents[row].getStatus() == "in"){
             QTableWidgetItem* item = new QTableWidgetItem();
             QString type = QString::fromStdString(tents[row].getItemType());
             item->setText(type);
@@ -45,7 +43,7 @@ void Dialog::on_pushButton_item_2_clicked()
     for (int row = 0 ; row < 24; row++ )
     {
 
-        if (equip[row].getCondition() == "good" && equip[row].getStatus() == "in"){
+        if (stove[row].getCondition() == "good" && stove[row].getStatus() == "in"){
             QTableWidgetItem* item = new QTableWidgetItem();
             QString type = QString::fromStdString(stove[row].getItemType());
             item->setText(type);
@@ -57,7 +55,7 @@ void Dialog::on_pushButton_item_2_clicked()
     for (int row = 0 ; row < 24; row++ )
     {
 
-        if (equip[row].getCondition() == "good" && equip[row].getStatus() == "in"){
+        if (lanterns[row].getCondition() == "good" && lanterns[row].getStatus() == "in"){
             QTableWidgetItem* item = new QTableWidgetItem();
             QString type = QString::fromStdString(lanterns[row].getItemType());
             item->setText(type);
@@ -69,7 +67,7 @@ void Dialog::on_pushButton_item_2_clicked()
 
     for (int row = 0 ; row < 24; row++ )
     {
-        if (equip[row].getCondition() == "good" && equip[row].getStatus() == "in"){
+        if (tents[row].getCondition() == "good" && tents[row].getStatus() == "in"){
             QTableWidgetItem* item = new QTableWidgetItem();
             QString id = QString::fromStdString(tents[row].getItemId());
             item->setText(id);
@@ -78,7 +76,7 @@ void Dialog::on_pushButton_item_2_clicked()
     }
     for (int row = 0 ; row < 24; row++ )
     {
-        if (equip[row].getCondition() == "good" && equip[row].getStatus() == "in"){
+        if (stove[row].getCondition() == "good" && stove[row].getStatus() == "in"){
             QTableWidgetItem* item = new QTableWidgetItem();
             QString id = QString::fromStdString(stove[row].getItemId());
             item->setText(id);
@@ -88,7 +86,7 @@ void Dialog::on_pushButton_item_2_clicked()
 
     for (int row = 0 ; row < 24; row++ )
     {
-        if (equip[row].getCondition() == "good" && equip[row].getStatus() == "in"){
+        if (lanterns[row].getCondition() == "good" && lanterns[row].getStatus() == "in"){
             QTableWidgetItem* item = new QTableWidgetItem();
             QString id = QString::fromStdString(lanterns[row].getItemId());
             item->setText(id);
@@ -98,7 +96,7 @@ void Dialog::on_pushButton_item_2_clicked()
 
     for (int row = 0 ; row < 24; row++ )
     {
-        if (equip[row].getCondition() == "good" && equip[row].getStatus() == "in"){
+        if (tents[row].getCondition() == "good" && tents[row].getStatus() == "in"){
             QTableWidgetItem* item = new QTableWidgetItem();
             QString id = QString::fromStdString(tents[row].getItemId());
             item->setText(id);
@@ -108,7 +106,7 @@ void Dialog::on_pushButton_item_2_clicked()
 
     for (int row = 0 ; row < 24; row++ )
     {
-        if (equip[row].getCondition() == "good" && equip[row].getStatus() == "in"){
+        if (stove[row].getCondition() == "good" && stove[row].getStatus() == "in"){
             QTableWidgetItem* item = new QTableWidgetItem();
             QString id = QString::fromStdString(stove[row].getItemId());
             item->setText(id);
@@ -118,7 +116,7 @@ void Dialog::on_pushButton_item_2_clicked()
 
     for (int row = 0 ; row < 24; row++ )
     {
-        if (equip[row].getCondition() == "good" && equip[row].getStatus() == "in"){
+        if (lanterns[row].getCondition() == "good" && lanterns[row].getStatus() == "in"){
             QTableWidgetItem* item = new QTableWidgetItem();
             QString id = QString::fromStdString(lanterns[row].getItemId());
             item->setText(id);
@@ -128,7 +126,7 @@ void Dialog::on_pushButton_item_2_clicked()
 
     for (int row = 0 ; row < 24; row++ )
     {
-        if (equip[row].getCondition() == "good" && equip[row].getStatus() == "in"){
+        if (tents[row].getCondition() == "good" && tents[row].getStatus() == "in"){
             QTableWidgetItem* item = new QTableWidgetItem();
             QString names = QString::fromStdString(tents[row].getItemName());
             item->setText(names);
@@ -138,7 +136,7 @@ void Dialog::on_pushButton_item_2_clicked()
 
     for (int row = 0 ; row < 24; row++ )
     {
-        if (equip[row].getCondition() == "good" && equip[row].getStatus() == "in"){
+        if (stove[row].getCondition() == "good" && stove[row].getStatus() == "in"){
             QTableWidgetItem* item = new QTableWidgetItem();
             QString names = QString::fromStdString(stove[row].getItemName());
             item->setText(names);
@@ -147,7 +145,7 @@ void Dialog::on_pushButton_item_2_clicked()
     }
     for (int row = 0 ; row < 24; row++ )
     {
-        if (equip[row].getCondition() == "good" && equip[row].getStatus() == "in"){
+        if (lanterns[row].getCondition() == "good" && lanterns[row].getStatus() == "in"){
             QTableWidgetItem* item = new QTableWidgetItem();
             QString names = QString::fromStdString(lanterns[row].getItemName());
             item->setText(names);
@@ -157,7 +155,7 @@ void Dialog::on_pushButton_item_2_clicked()
 
     for (int row = 0 ; row < 24; row++ )
     {
-        if (equip[row].getCondition() == "good" && equip[row].getStatus() == "in"){
+        if (tents[row].getCondition() == "good" && tents[row].getStatus() == "in"){
             QTableWidgetItem* item = new QTableWidgetItem();
             QString names = QString::fromStdString(tents[row].getBrand());
             item->setText(names);
@@ -167,7 +165,7 @@ void Dialog::on_pushButton_item_2_clicked()
 
     for (int row = 0 ; row < 24; row++ )
     {
-        if (equip[row].getCondition() == "good" && equip[row].getStatus() == "in"){
+        if (stove[row].getCondition() == "good" && stove[row].getStatus() == "in"){
             QTableWidgetItem* item = new QTableWidgetItem();
             QString names = QString::fromStdString(stove[row].getBrand());
             item->setText(names);
@@ -177,7 +175,7 @@ void Dialog::on_pushButton_item_2_clicked()
 
     for (int row = 0 ; row < 24; row++ )
     {
-        if (equip[row].getCondition() == "good" && equip[row].getStatus() == "in"){
+        if (lanterns[row].getCondition() == "good" && lanterns[row].getStatus() == "in"){
             QTableWidgetItem* item = new QTableWidgetItem();
             QString names = QString::fromStdString(lanterns[row].getBrand());
             item->setText(names);
@@ -187,7 +185,7 @@ void Dialog::on_pushButton_item_2_clicked()
 
     for (int row = 0 ; row < 24; row++ )
     {
-        if (equip[row].getCondition() == "good" && equip[row].getStatus() == "in"){
+        if (tents[row].getCondition() == "good" && tents[row].getStatus() == "in"){
             QTableWidgetItem* item = new QTableWidgetItem();
             QString names = QString::fromStdString(tents[row].getDateOfPurchase());
             item->setText(names);
@@ -197,7 +195,7 @@ void Dialog::on_pushButton_item_2_clicked()
 
     for (int row = 0 ; row < 24; row++ )
     {
-        if (equip[row].getCondition() == "good" && equip[row].getStatus() == "in"){
+        if (stove[row].getCondition() == "good" && stove[row].getStatus() == "in"){
             QTableWidgetItem* item = new QTableWidgetItem();
             QString names = QString::fromStdString(stove[row].getDateOfPurchase());
             item->setText(names);
@@ -207,7 +205,7 @@ void Dialog::on_pushButton_item_2_clicked()
 
     for (int row = 0 ; row < 24; row++ )
     {
-        if (equip[row].getCondition() == "good" && equip[row].getStatus() == "in"){
+        if (lanterns[row].getCondition() == "good" && lanterns[row].getStatus() == "in"){
             QTableWidgetItem* item = new QTableWidgetItem();
             QString names = QString::fromStdString(lanterns[row].getDateOfPurchase());
             item->setText(names);
@@ -216,7 +214,7 @@ void Dialog::on_pushButton_item_2_clicked()
     }
     for (int row = 0 ; row < 24; row++ )
     {
-        if (equip[row].getCondition() == "good" && equip[row].getStatus() == "in"){
+        if (tents[row].getCondition() == "good" && tents[row].getStatus() == "in"){
             QTableWidgetItem* item = new QTableWidgetItem();
             QString names = QString::fromStdString(tents[row].getCondition());
             item->setText(names);
@@ -226,7 +224,7 @@ void Dialog::on_pushButton_item_2_clicked()
 
     for (int row = 0 ; row < 24; row++ )
     {
-        if (equip[row].getCondition() == "good" && equip[row].getStatus() == "in"){
+        if (stove[row].getCondition() == "good" && stove[row].getStatus() == "in"){
             QTableWidgetItem* item = new QTableWidgetItem();
             QString names = QString::fromStdString(stove[row].getCondition());
             item->setText(names);
@@ -236,7 +234,7 @@ void Dialog::on_pushButton_item_2_clicked()
 
     for (int row = 0 ; row < 24; row++ )
     {
-        if (equip[row].getCondition() == "good" && equip[row].getStatus() == "in"){
+        if (lanterns[row].getCondition() == "good" && lanterns[row].getStatus() == "in"){
             QTableWidgetItem* item = new QTableWidgetItem();
             QString names = QString::fromStdString(lanterns[row].getCondition());
             item->setText(names);
@@ -246,7 +244,7 @@ void Dialog::on_pushButton_item_2_clicked()
 
     for (int row = 0 ; row < 24; row++ )
     {
-        if (equip[row].getCondition() == "good" && equip[row].getStatus() == "in"){
+        if (tents[row].getCondition() == "good" && tents[row].getStatus() == "in"){
             QTableWidgetItem* item = new QTableWidgetItem();
             QString names = QString::fromStdString(tents[row].getStatus());
             item->setText(names);
@@ -256,7 +254,7 @@ void Dialog::on_pushButton_item_2_clicked()
 
     for (int row = 0 ; row < 24; row++ )
     {
-        if (equip[row].getCondition() == "good" && equip[row].getStatus() == "in"){
+        if (stove[row].getCondition() == "good" && stove[row].getStatus() == "in"){
             QTableWidgetItem* item = new QTableWidgetItem();
             QString names = QString::fromStdString(stove[row].getStatus());
             item->setText(names);
@@ -266,7 +264,7 @@ void Dialog::on_pushButton_item_2_clicked()
 
     for (int row = 0 ; row < 24; row++ )
     {
-        if (equip[row].getCondition() == "good" && equip[row].getStatus() == "in"){
+        if (lanterns[row].getCondition() == "good" && lanterns[row].getStatus() == "in"){
             QTableWidgetItem* item = new QTableWidgetItem();
             QString names = QString::fromStdString(lanterns[row].getStatus());
             item->setText(names);
