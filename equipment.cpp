@@ -38,7 +38,7 @@ Equipment::~Equipment()
 
 string Equipment::getItemId()
 {
-    return this->_itemId;
+    return "a";
 }
 
 string Equipment::getItemName()

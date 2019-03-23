@@ -3,6 +3,9 @@
 
 #include <QMainWindow>
 #include "dialog.h"
+#include <QMessageBox>
+#include<string>
+using namespace std;
 
 namespace Ui {
 class MainWindow;
@@ -15,6 +18,9 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+
+    QString id;
+    QString pass;
 
 private slots:
 

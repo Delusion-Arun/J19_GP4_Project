@@ -2,7 +2,6 @@
 #include "ui_mainwindow.h"
 #include <QMessageBox>
 
-
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -23,11 +22,13 @@ void MainWindow::on_pushButton_Login_clicked()
 
     if (userid == "admin" && password== "admin"){
         hide();
+        id = userid;
+        pass = password;
         dialog = new Dialog(this);
         dialog -> show();
-
     }
     else{
         QMessageBox::warning(this,"Login", "The User-id or password is incorrect.");
     }
 }
+

@@ -28,12 +28,18 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     dialog.cpp \
-    equipment.cpp
+    equipment.cpp \
+    loancontrol.cpp \
+    user.cpp \
+    filehandler.cpp
 
 HEADERS += \
         mainwindow.h \
     dialog.h \
-    equipment.h
+    equipment.h \
+    loancontrol.h \
+    user.h \
+    filehandler.h
 
 FORMS += \
         mainwindow.ui \
