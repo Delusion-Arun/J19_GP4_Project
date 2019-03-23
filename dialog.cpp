@@ -276,6 +276,15 @@ void Dialog::on_pushButton_item_2_clicked()
 
 void Dialog::on_pushButton_loan_2_clicked()
 {
+
+    for (int x = 0; x<7; x++){
+        for (int y = 0; y<24; y++){
+            QTableWidgetItem* item = new QTableWidgetItem();
+            item->setText("");
+            ui->tableWidget->setItem(y, x,item);
+        }
+    }
+
     Tent *tents;
     Stove *stove;
     Lantern *lanterns;
