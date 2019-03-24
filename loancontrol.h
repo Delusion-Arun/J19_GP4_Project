@@ -10,6 +10,7 @@
 
 using namespace std;	// delete this
 
+
 void prepare(User*& user, Tent*& tents, Stove*& stoves, Lantern*& lanterns, string**& records, int &size);
 
 string getDate();
@@ -37,4 +38,5 @@ string **getUserCurrentBorrowRecord(User* const& user, string *const*const recor
 void performDisplayUserBorrowedItem(User *const &user, Tent *const &tents, Stove *const &stoves, Lantern *const &lanterns, string** &records, int &size);
 
 void performReturnItem(User* const& user, Tent* const& tents, Stove* const& stoves, Lantern* const& lanterns, string** &records, int &size);
+
 #endif // LOANCONTROL_H

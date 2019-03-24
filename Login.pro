@@ -31,7 +31,9 @@ SOURCES += \
     equipment.cpp \
     loancontrol.cpp \
     user.cpp \
-    filehandler.cpp
+    filehandler.cpp \
+    returnequip.cpp \
+    borrowequip.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -39,11 +41,15 @@ HEADERS += \
     equipment.h \
     loancontrol.h \
     user.h \
-    filehandler.h
+    filehandler.h \
+    returnequip.h \
+    borrowequip.h
 
 FORMS += \
         mainwindow.ui \
-    dialog.ui
+    dialog.ui \
+    returnequip.ui \
+    borrowequip.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

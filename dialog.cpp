@@ -29,6 +29,22 @@ void Dialog::on_pushButton_item_2_clicked()
     Lantern *lanterns;
 
 
+    ui->tableWidget->horizontalHeaderItem( 0 )->setText( "Item Type" );
+    ui->tableWidget->horizontalHeaderItem( 1 )->setText( "Item Id" );
+    ui->tableWidget->horizontalHeaderItem( 2 )->setText( "Item Name" );
+    ui->tableWidget->horizontalHeaderItem( 3 )->setText( "Brand" );
+    ui->tableWidget->horizontalHeaderItem( 4 )->setText( "Date Of Purchase" );
+    ui->tableWidget->horizontalHeaderItem( 5 )->setText( "Condition" );
+    ui->tableWidget->horizontalHeaderItem( 6 )->setText( "Status" );
+
+    for (int x = 0; x<7; x++){
+        for (int y = 0; y<24; y++){
+            QTableWidgetItem* item = new QTableWidgetItem();
+            item->setText("");
+            ui->tableWidget->setItem(y,x,item);
+        }
+    }
+
     for (int row = 0 ; row < 24; row++ )
     {
 
@@ -293,6 +309,14 @@ void Dialog::on_pushButton_loan_2_clicked()
     userid = wind.id.toStdString();
     password = wind.pass.toStdString();
 
+    for (int x = 0; x<7; x++){
+        for (int y = 0; y<24; y++){
+            QTableWidgetItem* item = new QTableWidgetItem();
+            item->setText("");
+            ui->tableWidget->setItem(y,x,item);
+        }
+    }
+
     //dummy
     User *user;
 
@@ -339,3 +363,37 @@ void Dialog::on_pushButton_loan_2_clicked()
     delete[] ids;
 
 }
+
+string ** returnRecords(){
+    return records;
+}
+
+void Dialog::on_pushButton_submenu_2_clicked()
+{
+    User *user;
+    Tent *tents;
+    Stove *stove;
+    Lantern *lanterns;
+    int size = sizeof(records);
+    performBorrowEquipment(user, tents, stove,lanterns, records, size);
+
+}
+
+void Dialog::on_pushButton_return_2_clicked()
+{
+    User *user;
+    Tent *tents;
+    Stove *stove;
+    Lantern *lanterns;
+    int size = sizeof(records);
+    performReturnItem(user, tents, stove,lanterns, records, size);
+}
+
+void Dialog::on_pushButton_exit_2_clicked()
+{
+    hide();
+    QMessageBox::information(this,"Login", "Thank you for using our program.");
+}
+
+
+

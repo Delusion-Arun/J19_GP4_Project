@@ -1,4 +1,7 @@
 #include "LoanControl.h"
+#include <QMessageBox>
+#include "borrowequip.h"
+#include "returnequip.h"
 
 #define USER_PATH "txt/user.txt"
 #define EQUIPMENT_PATH "Resources/camp_equipment.txt"
@@ -425,9 +428,14 @@ void performBorrowEquipment(User* const& user, Tent* const& tents, Stove* const&
     string input_itemId;
 
     while (!isExceed) {
-        cout << endl;
+        /*cout << endl;
         cout << "Please enter the item's Id that you wanted to borrow:  ";
-        cin >> input_itemId;
+        cin >> input_itemId;*/
+
+       BorrowEquip *borrowequip;
+       borrowequip->show();
+       input_itemId = borrowequip->itemb;
+
 
         bool found = false;
         Equipment *item = NULL;
@@ -486,26 +494,50 @@ void performBorrowEquipment(User* const& user, Tent* const& tents, Stove* const&
                     updateLoanRecord(records, size);
                     updateEquipments(tents, stoves, lanterns);
 
-                    cout << "item " << input_itemId << " has been successfully borrowed." << endl;
+                    /*cout << "item " << input_itemId << " has been successfully borrowed." << endl;*/
+
+                    QString names = QString::fromStdString(input_itemId);
+                    QMessageBox msgBox;
+                    msgBox.setText("item " + names + " has been successfully borrowed.");
+                    msgBox.exec();
 
                     return;
                 }
                 else {		// bad condition
-                    cout << "item " << input_itemId << " is currently not available." << endl;
+                    //cout << "item " << input_itemId << " is currently not available." << endl;
+                    QString names = QString::fromStdString(input_itemId);
+                    QMessageBox msgBox;
+                    msgBox.setText("item " + names + " is currently not available.");
+                    msgBox.exec();
                 }
             }
             else {		// status == out
-                cout << "item " << input_itemId << " is currently borrowed by others." << endl;
+                //cout << "item " << input_itemId << " is currently borrowed by others." << endl;
+                QString names = QString::fromStdString(input_itemId);
+                QMessageBox msgBox;
+                msgBox.setText("item " + names + " is currently borrowed by others.");
+                msgBox.exec();
             }
 
         }
         else {	// 404 item not found
-            cout << "item " << input_itemId << " not found." << endl;
+            //cout << "item " << input_itemId << " not found." << endl;
+            QString names = QString::fromStdString(input_itemId);
+            QMessageBox msgBox;
+            msgBox.setText("item " + names + " not found.");
+            msgBox.exec();
         }
+
+        borrowequip->hide();
 
     } // end of while
 
-    cout << "User " << username << " has exceed the limit of allowed number of item borrowing." << endl;
+    //cout << "User " << username << " has exceed the limit of allowed number of item borrowing." << endl;
+    QMessageBox msgBox;
+    msgBox.setText("User has exceed the limit of allowed number of item borrowing.");
+    msgBox.exec();
+
+
 }
 
 // Return dynamic 2d array containing the "loan date", "borrowed equipment Ids", "equipment name" and "date of return" of user's borrowed items
@@ -600,9 +632,13 @@ void performReturnItem(User* const& user, Tent* const& tents, Stove* const& stov
     string input_itemId;
 
     while (hasBorrow) {
-        cout << endl;
+        /*cout << endl;
         cout << "Please enter the item's Id that you wanted to return:  ";
-        cin >> input_itemId;
+        cin >> input_itemId;*/
+
+        ReturnEquip *returnequip;
+        returnequip->show();
+        input_itemId = returnequip->itemid;
 
         bool match = false;
         int count;
@@ -672,15 +708,30 @@ void performReturnItem(User* const& user, Tent* const& tents, Stove* const& stov
                 updateLoanRecord(records, size);
                 updateEquipments(tents, stoves, lanterns);
 
-                cout << "item " << input_itemId << " has been successfully returned." << endl;
+                //cout << "item " << input_itemId << " has been successfully returned." << endl;
+
+                QString names = QString::fromStdString(input_itemId);
+                QMessageBox msgBox;
+                msgBox.setText("item "+names+" has been successfully returned.");
+                msgBox.exec();
 
                 return;
             }
             else {	// 404 item not found
-                cout << "item " << input_itemId << " not found." << endl;
+                //cout << "item " << input_itemId << " not found." << endl;
+                QString names = QString::fromStdString(input_itemId);
+                QMessageBox msgBox;
+                msgBox.setText("item "+names+" not found");
+                msgBox.exec();
             }
         }
+        returnequip->hide();
     } // end of while
 
-    cout << "User " << username << " has not borrow any equipment yet." << endl;
+    //cout << "User has not borrow any equipment yet." << endl;
+
+    QString names = QString::fromStdString(input_itemId);
+    QMessageBox msgBox;
+    msgBox.setText("User has not borrow any equipment yet.");
+    msgBox.exec();
 }
