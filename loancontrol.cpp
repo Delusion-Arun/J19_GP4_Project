@@ -433,6 +433,7 @@ void performBorrowEquipment(User* const& user, Tent* const& tents, Stove* const&
         cin >> input_itemId;*/
 
        BorrowEquip *borrowequip;
+       borrowequip = new BorrowEquip;
        borrowequip->show();
        input_itemId = borrowequip->itemb;
 
@@ -637,6 +638,7 @@ void performReturnItem(User* const& user, Tent* const& tents, Stove* const& stov
         cin >> input_itemId;*/
 
         ReturnEquip *returnequip;
+        returnequip = new ReturnEquip;
         returnequip->show();
         input_itemId = returnequip->itemid;
 
