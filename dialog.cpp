@@ -320,7 +320,7 @@ void Dialog::on_pushButton_loan_2_clicked()
     //dummy
     User *user;
 
-    int size = sizeof(records);
+    int size = sizeof(records)/sizeof (records[0]);
     int count = size;
 
     string **ids = getUserCurrentBorrowRecord(user, records, size, count);
@@ -374,7 +374,7 @@ void Dialog::on_pushButton_submenu_2_clicked()
     Tent *tents;
     Stove *stove;
     Lantern *lanterns;
-    int size = sizeof(records);
+    int size = sizeof(records)/sizeof (records[0]);
     performBorrowEquipment(user, tents, stove,lanterns, records, size);
 
 }
@@ -385,7 +385,7 @@ void Dialog::on_pushButton_return_2_clicked()
     Tent *tents;
     Stove *stove;
     Lantern *lanterns;
-    int size = sizeof(records);
+    int size = sizeof(records)/sizeof (records[0]);
     performReturnItem(user, tents, stove,lanterns, records, size);
 }
 
